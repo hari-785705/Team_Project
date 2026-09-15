@@ -651,7 +651,8 @@ The repository should also contain:
 
 ## Result
 
-A shared GitHub repository was created successfully. Team members worked on separate branches, assigned tasks using Issues, uploaded code through commits, created Pull Requests, reviewed each other’s code, and merged the completed work into the main branch. The project was documented using `README.md`.
+A shared GitHub repository was created successfully. Team members worked on separate branches, assigned tasks using Issues, uploaded code through commits, created Pull Requests, reviewed each other’s code, and merged the completed work into the main branch. The project was documented using `README.md`.<img width="821" height="734" alt="image" src="https://github.com/user-attachments/assets/8db87c76-b50c-4a9c-a0ab-bcc23c5fb993" />
+
 
 ## Conclusion
 
