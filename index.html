@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -31,6 +32,7 @@
       justify-content: center;
       padding: 20px;
       font-family: "Segoe UI", system-ui, sans-serif;
+
       background: linear-gradient(
         120deg,
         #1b1235,
@@ -39,6 +41,7 @@
         #f107a3,
         #ff8a3d
       );
+
       background-size: 300% 300%;
       animation: gradientShift 14s ease infinite;
       overflow-x: hidden;
@@ -111,11 +114,14 @@
       width: 100%;
       max-width: 430px;
       padding: 35px 30px;
+
       background: rgba(255, 255, 255, 0.14);
       backdrop-filter: blur(18px);
       -webkit-backdrop-filter: blur(18px);
+
       border: 1px solid rgba(255, 255, 255, 0.35);
       border-radius: 20px;
+
       box-shadow: 0 25px 50px rgba(20, 5, 50, 0.45);
     }
 
@@ -168,12 +174,14 @@
       border: none;
       border-radius: 10px;
       color: white;
+
       background: linear-gradient(
         90deg,
         var(--violet),
         var(--pink),
         var(--orange)
       );
+
       background-size: 200% auto;
       font-size: 16px;
       font-weight: 700;
@@ -255,10 +263,13 @@
       width: 80px;
       height: 80px;
       margin: 0 auto 20px;
+
       display: flex;
       align-items: center;
       justify-content: center;
+
       border-radius: 50%;
+
       background: conic-gradient(
         var(--violet),
         var(--pink),
@@ -266,6 +277,7 @@
         var(--cyan),
         var(--violet)
       );
+
       font-size: 35px;
     }
 
@@ -273,7 +285,9 @@
       margin-top: 20px;
       padding: 15px;
       border-radius: 12px;
+
       background: rgba(255, 255, 255, 0.12);
+
       color: white;
       line-height: 1.8;
       font-size: 14px;
@@ -296,138 +310,241 @@
 </head>
 
 <body>
+
   <div class="blob blob1"></div>
   <div class="blob blob2"></div>
   <div class="blob blob3"></div>
 
   <div class="card">
 
-    <!-- LOGIN VIEW -->
+    <!-- ================= LOGIN ================= -->
+
     <section id="loginView" class="view active">
+
       <h1>Welcome Back</h1>
-      <p class="subtitle">Login to access your account</p>
+
+      <p class="subtitle">
+        Login to access your account
+      </p>
 
       <div id="loginMsg" class="msg"></div>
 
       <form id="loginForm">
+
         <div class="field">
-          <label for="loginEmail">Email</label>
+
+          <label for="loginEmail">
+            Email
+          </label>
+
           <input
             id="loginEmail"
             type="email"
             placeholder="Enter your email"
+            autocomplete="email"
             required
           />
+
         </div>
 
         <div class="field">
-          <label for="loginPassword">Password</label>
+
+          <label for="loginPassword">
+            Password
+          </label>
+
           <input
             id="loginPassword"
             type="password"
             placeholder="Enter your password"
+            autocomplete="current-password"
             required
           />
+
         </div>
 
         <button id="loginButton" type="submit">
           Sign In
         </button>
+
       </form>
 
       <div class="switch-link">
+
         New user?
-        <a id="goToRegister">Create an account</a>
+
+        <a id="goToRegister">
+          Create an account
+        </a>
+
       </div>
+
     </section>
 
-    <!-- REGISTER VIEW -->
+
+    <!-- ================= REGISTER ================= -->
+
     <section id="registerView" class="view">
+
       <h1>Create Account</h1>
-      <p class="subtitle">Register using your details</p>
+
+      <p class="subtitle">
+        Register using your details
+      </p>
 
       <div id="registerMsg" class="msg"></div>
 
       <form id="registerForm">
 
         <div class="field">
-          <label for="registerName">Full Name</label>
+
+          <label for="registerName">
+            Full Name
+          </label>
+
           <input
             id="registerName"
             type="text"
             placeholder="Enter your full name"
+            autocomplete="name"
             required
           />
+
         </div>
 
         <div class="field">
-          <label for="registerMobile">Mobile Number</label>
+
+          <label for="registerMobile">
+            Mobile Number
+          </label>
+
           <input
             id="registerMobile"
             type="tel"
             placeholder="Enter 10-digit mobile number"
             pattern="[0-9]{10}"
             maxlength="10"
+            inputmode="numeric"
             required
           />
+
         </div>
 
         <div class="field">
-          <label for="registerEmail">Email</label>
+
+          <label for="registerEmail">
+            Email
+          </label>
+
           <input
             id="registerEmail"
             type="email"
             placeholder="Enter your email"
+            autocomplete="email"
             required
           />
+
         </div>
 
         <div class="field">
-          <label for="registerPassword">Password</label>
+
+          <label for="registerPassword">
+            Password
+          </label>
+
           <input
             id="registerPassword"
             type="password"
             placeholder="Minimum 8 characters"
             minlength="8"
+            autocomplete="new-password"
             required
           />
+
         </div>
 
         <button id="registerButton" type="submit">
           Create Account
         </button>
+
       </form>
 
       <div class="switch-link">
+
         Already have an account?
-        <a id="goToLogin">Sign In</a>
+
+        <a id="goToLogin">
+          Sign In
+        </a>
+
       </div>
+
     </section>
 
-    <!-- DASHBOARD VIEW -->
+
+    <!-- ================= DASHBOARD ================= -->
+
     <section id="dashboardView" class="view">
-      <div class="avatar">🎉</div>
 
-      <h1>You're Logged In</h1>
-      <p class="subtitle">Welcome to your dashboard</p>
-
-      <div class="profile-box">
-        <div>Name: <strong id="dashboardName">Loading...</strong></div>
-        <div>Mobile: <strong id="dashboardMobile">Loading...</strong></div>
-        <div>Email: <strong id="dashboardEmail">Loading...</strong></div>
+      <div class="avatar">
+        🎉
       </div>
 
-      <button id="logoutButton" class="logout-button">
+      <h1>
+        You're Logged In
+      </h1>
+
+      <p class="subtitle">
+        Welcome to your dashboard
+      </p>
+
+      <div class="profile-box">
+
+        <div>
+          Name:
+          <strong id="dashboardName">
+            Loading...
+          </strong>
+        </div>
+
+        <div>
+          Mobile:
+          <strong id="dashboardMobile">
+            Loading...
+          </strong>
+        </div>
+
+        <div>
+          Email:
+          <strong id="dashboardEmail">
+            Loading...
+          </strong>
+        </div>
+
+      </div>
+
+      <button
+        id="logoutButton"
+        class="logout-button"
+        type="button"
+      >
         Sign Out
       </button>
+
     </section>
 
   </div>
 
-  <!-- FIREBASE -->
+
+  <!-- ================= FIREBASE ================= -->
+
   <script type="module">
-    import { initializeApp } from
+
+    import {
+      initializeApp
+    } from
       "https://www.gstatic.com/firebasejs/12.19.0/firebase-app.js";
+
 
     import {
       getAuth,
@@ -439,6 +556,7 @@
     } from
       "https://www.gstatic.com/firebasejs/12.19.0/firebase-auth.js";
 
+
     import {
       getFirestore,
       doc,
@@ -447,284 +565,683 @@
     } from
       "https://www.gstatic.com/firebasejs/12.19.0/firebase-firestore.js";
 
+
+    /* ==========================================
+       FIREBASE CONFIG
+    ========================================== */
+
     const firebaseConfig = {
-      apiKey: "AIzaSyBttqS0AREt1FbQh9aPYo5L1fvThq8IWbc",
-      authDomain: "my-login-app-73603.firebaseapp.com",
-      projectId: "my-login-app-73603",
-      storageBucket: "my-login-app-73603.firebasestorage.app",
-      messagingSenderId: "577294611746",
-      appId: "1:577294611746:web:284900df1cd37d04e7a17b",
-      measurementId: "G-18NVP36YPL"
+
+      apiKey:
+        "AIzaSyBttqS0AREt1FbQh9aPYo5L1fvThq8IWbc",
+
+      authDomain:
+        "my-login-app-73603.firebaseapp.com",
+
+      projectId:
+        "my-login-app-73603",
+
+      storageBucket:
+        "my-login-app-73603.firebasestorage.app",
+
+      messagingSenderId:
+        "577294611746",
+
+      appId:
+        "1:577294611746:web:284900df1cd37d04e7a17b",
+
+      measurementId:
+        "G-18NVP36YPL"
     };
 
-    const app = initializeApp(firebaseConfig);
-    const auth = getAuth(app);
-    const db = getFirestore(app);
 
-    const loginView = document.getElementById("loginView");
-    const registerView = document.getElementById("registerView");
-    const dashboardView = document.getElementById("dashboardView");
+    /* ==========================================
+       INITIALIZE FIREBASE
+    ========================================== */
 
-    const loginMsg = document.getElementById("loginMsg");
-    const registerMsg = document.getElementById("registerMsg");
+    const app =
+      initializeApp(firebaseConfig);
 
-    const loginButton = document.getElementById("loginButton");
-    const registerButton = document.getElementById("registerButton");
+    const auth =
+      getAuth(app);
+
+    const db =
+      getFirestore(app);
+
+
+    /* ==========================================
+       GET HTML ELEMENTS
+    ========================================== */
+
+    const loginView =
+      document.getElementById("loginView");
+
+    const registerView =
+      document.getElementById("registerView");
+
+    const dashboardView =
+      document.getElementById("dashboardView");
+
+
+    const loginMsg =
+      document.getElementById("loginMsg");
+
+    const registerMsg =
+      document.getElementById("registerMsg");
+
+
+    const loginButton =
+      document.getElementById("loginButton");
+
+    const registerButton =
+      document.getElementById("registerButton");
+
+
+    /* ==========================================
+       SHOW VIEW
+    ========================================== */
 
     function showView(viewName) {
+
       loginView.classList.remove("active");
+
       registerView.classList.remove("active");
+
       dashboardView.classList.remove("active");
 
+
       if (viewName === "login") {
+
         loginView.classList.add("active");
+
       }
+
 
       if (viewName === "register") {
+
         registerView.classList.add("active");
+
       }
+
 
       if (viewName === "dashboard") {
+
         dashboardView.classList.add("active");
+
       }
     }
 
-    function showMessage(element, message, type) {
+
+    /* ==========================================
+       SHOW MESSAGE
+    ========================================== */
+
+    function showMessage(
+      element,
+      message,
+      type
+    ) {
+
       element.textContent = message;
-      element.className = "msg " + type;
+
+      element.className =
+        "msg " + type;
     }
 
+
+    /* ==========================================
+       CLEAR MESSAGE
+    ========================================== */
+
     function clearMessage(element) {
+
       element.textContent = "";
+
       element.className = "msg";
     }
 
+
+    /* ==========================================
+       FIREBASE ERROR HANDLER
+    ========================================== */
+
     function firebaseError(error) {
+
+      console.error(
+        "Firebase Error:",
+        error
+      );
+
+
       switch (error.code) {
+
         case "auth/email-already-in-use":
+
           return "This email is already registered.";
 
+
         case "auth/invalid-email":
+
           return "Please enter a valid email address.";
 
+
         case "auth/weak-password":
+
           return "Password must contain at least 6 characters.";
 
+
         case "auth/user-not-found":
+
           return "Email is not registered. Please create an account first.";
 
+
         case "auth/invalid-credential":
+
           return "Invalid email or password.";
+
 
         case "auth/invalid-login-credentials":
+
           return "Invalid email or password.";
 
+
         case "auth/wrong-password":
+
           return "Incorrect password.";
 
+
+        case "auth/too-many-requests":
+
+          return "Too many login attempts. Please try again later.";
+
+
         case "auth/network-request-failed":
-          return "Check your internet connection.";
+
+          return "Network error. Check your internet connection.";
+
+
+        case "auth/operation-not-allowed":
+
+          return "Email/Password login is disabled in Firebase Console.";
+
+
+        case "auth/user-disabled":
+
+          return "This account has been disabled.";
+
 
         default:
-          return error.message;
+
+          return (
+            error.message ||
+            "Something went wrong. Please try again."
+          );
       }
     }
 
+
+    /* ==========================================
+       GO TO REGISTER
+    ========================================== */
+
     document
       .getElementById("goToRegister")
-      .addEventListener("click", () => {
-        clearMessage(loginMsg);
-        showView("register");
-      });
+      .addEventListener(
+        "click",
+        () => {
+
+          clearMessage(loginMsg);
+
+          clearMessage(registerMsg);
+
+          document
+            .getElementById("registerForm")
+            .reset();
+
+          showView("register");
+        }
+      );
+
+
+    /* ==========================================
+       GO TO LOGIN
+    ========================================== */
 
     document
       .getElementById("goToLogin")
-      .addEventListener("click", () => {
-        clearMessage(registerMsg);
-        showView("login");
-      });
+      .addEventListener(
+        "click",
+        () => {
 
-    // REGISTER
+          clearMessage(registerMsg);
+
+          clearMessage(loginMsg);
+
+          document
+            .getElementById("loginForm")
+            .reset();
+
+          showView("login");
+        }
+      );
+
+
+    /* ==========================================
+       REGISTER USER
+    ========================================== */
+
     document
       .getElementById("registerForm")
-      .addEventListener("submit", async (event) => {
-        event.preventDefault();
+      .addEventListener(
+        "submit",
+        async (event) => {
 
-        clearMessage(registerMsg);
+          event.preventDefault();
 
-        const name = document
-          .getElementById("registerName")
-          .value
-          .trim();
+          clearMessage(registerMsg);
 
-        const mobile = document
-          .getElementById("registerMobile")
-          .value
-          .trim();
 
-        const email = document
-          .getElementById("registerEmail")
-          .value
-          .trim();
+          /* GET FORM VALUES */
 
-        const password = document
-          .getElementById("registerPassword")
-          .value;
+          const name =
+            document
+              .getElementById("registerName")
+              .value
+              .trim();
 
-        if (!/^[0-9]{10}$/.test(mobile)) {
-          showMessage(
-            registerMsg,
-            "Enter a valid 10-digit mobile number.",
-            "error"
-          );
-          return;
+
+          const mobile =
+            document
+              .getElementById("registerMobile")
+              .value
+              .trim();
+
+
+          const email =
+            document
+              .getElementById("registerEmail")
+              .value
+              .trim()
+              .toLowerCase();
+
+
+          const password =
+            document
+              .getElementById("registerPassword")
+              .value;
+
+
+          /* VALIDATE MOBILE */
+
+          if (!/^[0-9]{10}$/.test(mobile)) {
+
+            showMessage(
+              registerMsg,
+              "Enter a valid 10-digit mobile number.",
+              "error"
+            );
+
+            return;
+          }
+
+
+          /* VALIDATE PASSWORD */
+
+          if (password.length < 8) {
+
+            showMessage(
+              registerMsg,
+              "Password must contain at least 8 characters.",
+              "error"
+            );
+
+            return;
+          }
+
+
+          registerButton.disabled = true;
+
+          registerButton.textContent =
+            "Creating Account...";
+
+
+          try {
+
+            /* CREATE FIREBASE AUTH USER */
+
+            const userCredential =
+              await createUserWithEmailAndPassword(
+                auth,
+                email,
+                password
+              );
+
+
+            const user =
+              userCredential.user;
+
+
+            /* SAVE NAME IN FIREBASE AUTH */
+
+            await updateProfile(
+              user,
+              {
+                displayName: name
+              }
+            );
+
+
+            /* SAVE USER DATA IN FIRESTORE */
+
+            await setDoc(
+              doc(
+                db,
+                "users",
+                user.uid
+              ),
+              {
+
+                uid: user.uid,
+
+                name: name,
+
+                mobile: mobile,
+
+                email: email,
+
+                createdAt:
+                  new Date().toISOString()
+              }
+            );
+
+
+            /* SUCCESS */
+
+            showMessage(
+              registerMsg,
+              "Account created successfully. You can now login.",
+              "success"
+            );
+
+
+            /* RESET FORM */
+
+            document
+              .getElementById("registerForm")
+              .reset();
+
+
+            /* SIGN OUT AFTER REGISTRATION */
+
+            await signOut(auth);
+
+
+            /* MOVE TO LOGIN */
+
+            setTimeout(
+              () => {
+
+                clearMessage(registerMsg);
+
+                document
+                  .getElementById("loginEmail")
+                  .value = email;
+
+                showView("login");
+
+              },
+              1000
+            );
+
+
+          } catch (error) {
+
+            showMessage(
+              registerMsg,
+              firebaseError(error),
+              "error"
+            );
+
+          } finally {
+
+            registerButton.disabled = false;
+
+            registerButton.textContent =
+              "Create Account";
+          }
         }
+      );
 
-        if (password.length < 8) {
-          showMessage(
-            registerMsg,
-            "Password must contain at least 8 characters.",
-            "error"
-          );
-          return;
-        }
 
-        registerButton.disabled = true;
-        registerButton.textContent = "Creating Account...";
+    /* ==========================================
+       LOGIN USER
+    ========================================== */
 
-        try {
-          const userCredential =
-            await createUserWithEmailAndPassword(
+    document
+      .getElementById("loginForm")
+      .addEventListener(
+        "submit",
+        async (event) => {
+
+          event.preventDefault();
+
+          clearMessage(loginMsg);
+
+
+          /* GET LOGIN VALUES */
+
+          const email =
+            document
+              .getElementById("loginEmail")
+              .value
+              .trim()
+              .toLowerCase();
+
+
+          const password =
+            document
+              .getElementById("loginPassword")
+              .value;
+
+
+          if (!email || !password) {
+
+            showMessage(
+              loginMsg,
+              "Please enter email and password.",
+              "error"
+            );
+
+            return;
+          }
+
+
+          loginButton.disabled = true;
+
+          loginButton.textContent =
+            "Signing In...";
+
+
+          try {
+
+            /* FIREBASE LOGIN */
+
+            await signInWithEmailAndPassword(
               auth,
               email,
               password
             );
 
-          const user = userCredential.user;
 
-          await updateProfile(user, {
-            displayName: name
-          });
+            /* onAuthStateChanged()
+               will open dashboard */
 
-          await setDoc(doc(db, "users", user.uid), {
-            uid: user.uid,
-            name: name,
-            mobile: mobile,
-            email: email,
-            createdAt: new Date().toISOString()
-          });
+          } catch (error) {
 
-          showMessage(
-            registerMsg,
-            "Account created successfully.",
-            "success"
-          );
+            showMessage(
+              loginMsg,
+              firebaseError(error),
+              "error"
+            );
 
-          document.getElementById("registerForm").reset();
+          } finally {
 
-        } catch (error) {
-          showMessage(
-            registerMsg,
-            firebaseError(error),
-            "error"
-          );
-        } finally {
-          registerButton.disabled = false;
-          registerButton.textContent = "Create Account";
+            loginButton.disabled = false;
+
+            loginButton.textContent =
+              "Sign In";
+          }
         }
-      });
+      );
 
-    // LOGIN
-    document
-      .getElementById("loginForm")
-      .addEventListener("submit", async (event) => {
-        event.preventDefault();
 
-        clearMessage(loginMsg);
+    /* ==========================================
+       LOGOUT
+    ========================================== */
 
-        const email = document
-          .getElementById("loginEmail")
-          .value
-          .trim();
-
-        const password = document
-          .getElementById("loginPassword")
-          .value;
-
-        loginButton.disabled = true;
-        loginButton.textContent = "Signing In...";
-
-        try {
-          await signInWithEmailAndPassword(
-            auth,
-            email,
-            password
-          );
-
-        } catch (error) {
-          showMessage(
-            loginMsg,
-            firebaseError(error),
-            "error"
-          );
-        } finally {
-          loginButton.disabled = false;
-          loginButton.textContent = "Sign In";
-        }
-      });
-
-    // LOGOUT
     document
       .getElementById("logoutButton")
-      .addEventListener("click", async () => {
-        await signOut(auth);
-        showView("login");
-      });
+      .addEventListener(
+        "click",
+        async () => {
 
-    // AUTH STATE
-    onAuthStateChanged(auth, async (user) => {
-      if (!user) {
-        showView("login");
-        return;
-      }
+          try {
 
-      try {
-        const userDocument = await getDoc(
-          doc(db, "users", user.uid)
-        );
+            await signOut(auth);
 
-        if (userDocument.exists()) {
-          const userData = userDocument.data();
+            clearMessage(loginMsg);
 
-          document.getElementById("dashboardName")
-            .textContent = userData.name || "Not available";
+            document
+              .getElementById("loginForm")
+              .reset();
 
-          document.getElementById("dashboardMobile")
-            .textContent = userData.mobile || "Not available";
+            showView("login");
 
-          document.getElementById("dashboardEmail")
-            .textContent = userData.email || user.email;
-        } else {
-          document.getElementById("dashboardName")
-            .textContent = user.displayName || "Not available";
+          } catch (error) {
 
-          document.getElementById("dashboardMobile")
-            .textContent = "Not available";
+            console.error(
+              "Logout Error:",
+              error
+            );
+          }
+        }
+      );
 
-          document.getElementById("dashboardEmail")
-            .textContent = user.email;
+
+    /* ==========================================
+       AUTH STATE
+    ========================================== */
+
+    onAuthStateChanged(
+      auth,
+      async (user) => {
+
+        /* USER NOT LOGGED IN */
+
+        if (!user) {
+
+          showView("login");
+
+          return;
         }
 
-        showView("dashboard");
 
-      } catch (error) {
-        showMessage(
-          loginMsg,
-          "Could not load profile information.",
-          "error"
-        );
+        try {
+
+          /* GET USER DOCUMENT */
+
+          const userDocument =
+            await getDoc(
+              doc(
+                db,
+                "users",
+                user.uid
+              )
+            );
+
+
+          /* USER DATA EXISTS */
+
+          if (userDocument.exists()) {
+
+            const userData =
+              userDocument.data();
+
+
+            document
+              .getElementById("dashboardName")
+              .textContent =
+                userData.name ||
+                user.displayName ||
+                "Not available";
+
+
+            document
+              .getElementById("dashboardMobile")
+              .textContent =
+                userData.mobile ||
+                "Not available";
+
+
+            document
+              .getElementById("dashboardEmail")
+              .textContent =
+                userData.email ||
+                user.email ||
+                "Not available";
+
+
+          } else {
+
+            /* FIREBASE AUTH DATA */
+
+            document
+              .getElementById("dashboardName")
+              .textContent =
+                user.displayName ||
+                "Not available";
+
+
+            document
+              .getElementById("dashboardMobile")
+              .textContent =
+                "Not available";
+
+
+            document
+              .getElementById("dashboardEmail")
+              .textContent =
+                user.email ||
+                "Not available";
+          }
+
+
+          /* OPEN DASHBOARD */
+
+          showView("dashboard");
+
+
+        } catch (error) {
+
+          console.error(
+            "Profile Error:",
+            error
+          );
+
+
+          showMessage(
+            loginMsg,
+            "Login successful, but profile data could not be loaded.",
+            "error"
+          );
+
+          showView("login");
+        }
       }
-    });
+    );
+
   </script>
+
 </body>
 </html>
+```
